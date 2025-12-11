@@ -188,7 +188,7 @@ class Output(ABC):
         pass
 
     @abstractmethod
-    def write_step(self, state: State) -> None:
+    def write_step(self, state: State, initial_date: datetime.datetime | None = None) -> None:
         """Write a step of the state.
 
         Parameters

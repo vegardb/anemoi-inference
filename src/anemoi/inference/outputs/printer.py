@@ -147,7 +147,7 @@ class PrinterOutput(Output):
             self.f = open(path, "w")
             self.print = partial(print, file=self.f)
 
-    def write_step(self, state: State) -> None:
+    def write_step(self, state: State, initial_date: datetime.datetime | None = None) -> None:
         """Write a step of the state.
 
         Parameters
